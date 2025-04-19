@@ -1,0 +1,154 @@
+body {
+  background-color: #111;
+  color: gold;
+  font-family: "Exo 2", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  height: 100vh;
+  margin: 0;
+}
+
+.join-container {
+  background-color: #222;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px #ffcc00aa;
+  text-align: center;
+  width: 100%;
+  max-width: 350px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background:  #00BFFF;
+  color: #111;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #f5c400;
+}
+
+.error-msg {
+  color: red;
+  margin-top: 10px;
+}
+
+/* Responsive tweak for very small phones */
+@media (max-width: 400px) {
+  .join-container {
+    padding: 1.2rem;
+  }
+
+  input,
+  button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
+
+/* Chatroom Screen */
+.chat-container {
+  background-color: #171717;
+  color: ;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100%;
+}
+
+.chat-box {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.chat-message {
+  margin-bottom: 15px;
+}
+
+.chat-message p {
+  margin: 0;
+  padding: 0.5rem;
+  border-radius: 8px;
+  background-color: #333;
+}
+
+.chat-message.sent p {
+  background-color: #444;
+  text-align: right;
+  color: gold;
+}
+
+.chat-message.received p {
+  background-color: #2a2a2a;
+  text-align: left;
+  color: #fff;
+}
+
+#chat-form {
+  display: flex;
+  padding: 10px;
+  background-color: #222;
+}
+
+#chat-form input {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: #333;
+  color: gold;
+  font-size: 1rem;
+}
+
+#chat-form button {
+  padding: 10px;
+  background-color:  #00BFFF;
+  color: #111;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  margin-left: 10px;
+}
+
+#chat-form button:hover {
+  background-color: #e0b100;
+}
+
+/* Responsive tweak for chat screen */
+@media (max-width: 768px) {
+  .chat-container {
+    padding: 1rem;
+  }
+
+  .chat-box {
+    padding: 0.5rem;
+  }
+
+  #chat-form input,
+  #chat-form button {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}

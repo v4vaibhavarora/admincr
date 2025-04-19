@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <title>Admin Chatroom - Join Chat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="join-container">
+    <h1>Welcome to Admin Chatroom</h1>
+    <input type="text" id="username" placeholder="Enter your name" />
+    <input type="password" id="password" placeholder="Enter room password" />
+    <button onclick="joinChat()">Join Chat</button>
+    <p id="error-msg" class="error-msg"></p>
+  </div>
+
+  <div class="chat-container" style="display:none;">
+    <h2>Chat Room</h2>
+    <div id="chat-box" style="height:200px; overflow-y:auto;"></div>
+    <input type="text" id="message" placeholder="Type a message..." />
+    <button onclick="sendMessage()">Send</button>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
